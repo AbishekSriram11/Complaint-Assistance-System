@@ -1,0 +1,16 @@
+.footerT{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width:100%;
+    text-align: center;
+    height: 5%;
+}
+footer>p{
+    padding-top: 1%;
+}
+.containerT{
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}

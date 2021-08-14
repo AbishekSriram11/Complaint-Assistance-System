@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="d-flex flex-column h-100">
+    <header >
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e6ee9c ;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">HCMS</a>
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Register</a>
+                  <a class="nav-link" href="tracker.html">Tracker</a>
+                  <a class="nav-link " href="stats.html">Stats</a>
+                </div>
+            </div>
+          </nav>
+    </header>
+
+    <div class="container-md" style="margin-top:10px">
+        <form action="actionRegister.php" enctype="multipart/form-data" method="POST" name="regForm">
+            <div class="mb-3">
+              <label for="Email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="Email" name="Email" required>
+            </div>
+            <div class="md-3">
+                <label for="Name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="Name" name="FName" required>
+            </div>
+            <div class="md-3">
+                <label for="Regno" class="form-label">Registration Number</label>
+                <input type="text" class="form-control" id="Regno" name="Regno" required>
+            </div>
+            <div class="md-3">
+                <label for="Roomnumber" class="form-label">Room Number</label>
+                <input type="number" class="form-control" id="Roomnumber" name="Roomnumber" min="100" max="1200" required>
+            </div>
+            <div class="md-3">
+                <label for="block" class="form-label">Select Block</label>
+                <br>
+                <select class="form-select form-select-lg mb-3" name="block" id="block">
+                    <option selected value="A">Block A</option>
+                    <option value="B">Block B</option>
+                    <option value="C">Block C</option>
+                </select>
+            </div>
+            <div class="md-3">
+                
+                    <label for="detail" class="form-label">Complaint Details</label>
+                    <textarea class="form-control" placeholder="Leave your Complaint here" id="detail" name="detail" required></textarea>
+            </div>
+            <div class="md-3" style=" margin-top: 10px;">
+                <label class="form-label">Select Complaint Type</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Type" id="Type1" value="cleaning" checked>
+                    <label class="form-check-label" for="Type1">
+                      Cleaning
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Type" id="Type2" value="electricity">
+                    <label class="form-check-label" for="Type2">
+                      Electricity
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Type" id="Type3" value="wifi">
+                    <label class="form-check-label" for="Type3">
+                      Wifi
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Type" id="Type4" value="washroom">
+                    <label class="form-check-label" for="Type4">
+                      Washroom
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Type" id="Type5" value="mess">
+                    <label class="form-check-label" for="Type5">
+                      Mess
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Type" id="Type6" value="architecture">
+                    <label class="form-check-label" for="Type6">
+                      Architecture
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Type" id="Type7" value="others">
+                    <label class="form-check-label" for="Type7">
+                      Others
+                    </label>
+                  </div>
+                  
+            </div>
+            <br>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="complaint_image" name="complaint_image" accept="image/x-png,image/jpeg,image/jpg">
+                  <label class="custom-file-label" for="complaint_image">Choose file</label>
+                </div>
+              </div>
+            <br>
+            <input type="submit" name= "submit" class="btn btn-primary" value="Submit">
+          </form>
+    </div>
+</body>
+<br>
+<footer class="page-footer font-small " style="background-color:#e6ee9c ;">
+    <div class="footer-copyright text-center py-3">
+        <p>Made by <a href="http://">Sairam</a> and <a href="http://">Abishek</a></p>
+      </div>
+  </footer>
+  <script src="js/register_validate.js"></script>
+</html>
